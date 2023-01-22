@@ -29,4 +29,11 @@ class NodeTest {
 		Assert.assertEquals("doop", list.append("doop"));
 	}
 
+	@Test
+	void testThatListHeadNextNodeIsEmpty() {
+		LinkedList list = new LinkedList();
+		list.append("doop");
+		
+		Assert.assertNull(list.head.next_node);
+	}
 }
