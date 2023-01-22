@@ -46,4 +46,12 @@ class ListTest {
 		
 		Assert.assertEquals(1, list.count);
 	}
+	
+	@Test
+	void testForListToStringMethod() {
+		LinkedList list = new LinkedList();
+		list.append("doop");
+		
+		Assert.assertEquals("doop", list.to_string());
+	}
 }

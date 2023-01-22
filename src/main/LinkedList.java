@@ -9,4 +9,8 @@ public class LinkedList {
 		count++;
 		return head.data;
 	}
+	
+	public String to_string() {
+		return head.data;
+	}
 }
