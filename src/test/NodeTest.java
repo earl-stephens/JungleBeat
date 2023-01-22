@@ -22,6 +22,11 @@ class NodeTest {
 		Assert.assertEquals("This is data", node.data);
 	}
 	
-	
+	@Test
+	void testThatNodeHasNextNode() {
+		Node node = new Node("This is data", null);
+		
+		Assert.assertEquals(null, node.next_node);
+	}
 
 }
