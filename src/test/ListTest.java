@@ -17,4 +17,11 @@ class ListTest {
 		Assert.assertNotNull(list);
 	}
 
+	@Test
+	void testThatHeadStartsOutEmpty() {
+		LinkedList list = new LinkedList();
+		
+		Assert.assertEquals(null, list.head);
+		
+	}
 }
