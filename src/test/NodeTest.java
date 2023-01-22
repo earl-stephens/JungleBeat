@@ -24,9 +24,9 @@ class NodeTest {
 	
 	@Test
 	void testThatNodeHasNextNode() {
-		Node node = new Node("This is data", null);
+		LinkedList list = new LinkedList();
 		
-		Assert.assertEquals(null, node.next_node);
+		Assert.assertEquals("doop", list.append("doop"));
 	}
 
 }
