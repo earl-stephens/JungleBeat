@@ -22,6 +22,13 @@ class ListTest {
 		LinkedList list = new LinkedList();
 		
 		Assert.assertEquals(null, list.head);
+	}
+	
+	@Test
+	void testForAppendMethod() {
+		LinkedList list = new LinkedList();
+		list.append("doop");
 		
+		Assert.assertEquals("doop", list.head.data);
 	}
 }
