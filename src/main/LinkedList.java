@@ -5,7 +5,7 @@ public class LinkedList {
 	public int count = 0;
 	
 	public String append(String data) {
-		head = new Node(data, null);
+		head = new Node(data);
 		count++;
 		return head.data;
 	}
