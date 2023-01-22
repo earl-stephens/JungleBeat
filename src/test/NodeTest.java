@@ -10,23 +10,23 @@ class NodeTest {
 
 	@Test
 	void testThatNodeExists() {
-		Node node = new Node("plop", null);
+		Node node = new Node("plop");
 		
 		Assert.assertNotNull(node);
 	}
 	
 	@Test
 	void testThatNodeHasData() {
-		Node node = new Node("This is data", null);
+		Node node = new Node("This is data");
 		
 		Assert.assertEquals("This is data", node.data);
 	}
 	
 	@Test
 	void testThatNodeHasNextNode() {
-		Node node = new Node("This is data", null);
+		Node node = new Node("This is data");
 		
-		Assert.assertEquals(null, node.next_node);
+		Assert.assertNull(node.next_node);
 	}
 
 }
