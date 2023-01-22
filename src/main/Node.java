@@ -2,11 +2,11 @@ package main;
 
 public class Node {
 	public String data;
-	public String next;
+	public String next_node;
 	
 	public Node(String data, String next) {
 		this.data = data;
-		this.next = next;
+		this.next_node = next;
 	}
 
 }

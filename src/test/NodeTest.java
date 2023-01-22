@@ -14,5 +14,14 @@ class NodeTest {
 		
 		Assert.assertNotNull(node);
 	}
+	
+	@Test
+	void testThatNodeHasData() {
+		Node node = new Node("This is data", null);
+		
+		Assert.assertEquals("This is data", node.data);
+	}
+	
+	
 
 }
