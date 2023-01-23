@@ -123,5 +123,6 @@ class ListTest {
 		  
 		  Assert.assertEquals("dop", list.prepend("dop"));
 		  Assert.assertEquals("dop plop suu", list.to_string());
+		  Assert.assertEquals(3, list.count());
 	  }
 }
