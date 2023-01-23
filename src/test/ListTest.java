@@ -100,7 +100,8 @@ class ListTest {
 		Assert.assertEquals(5, list.count());
 	}
 	
-	  @Test void testForToStringWithFiveNodes() { 
+	  @Test 
+	  void testForToStringWithFiveNodes() { 
 		  LinkedList list = new LinkedList(); 
 		  list.append("doop"); 
 		  list.append("deep"); 
@@ -108,6 +109,19 @@ class ListTest {
 		  list.append("dah"); 
 		  list.append("oom");
 	  
-		  Assert.assertEquals("doop deep ding dah oom", list.to_string()); }
-	 
+		  Assert.assertEquals("doop deep ding dah oom", list.to_string()); 
+	  } 
+	  
+	  @Test
+	  void testForPrependMethod() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("plop");
+		  
+		  Assert.assertEquals("plop", list.to_string());
+		  
+		  list.append("suu");
+		  
+		  Assert.assertEquals("dop", list.prepend("dop"));
+		  Assert.assertEquals("dop plop suu", list.to_string());
+	  }
 }

@@ -70,4 +70,11 @@ public class LinkedList {
 		String listString = String.join(" ", tempList);
 		return listString;
 	}
+	
+	public String prepend(String data) {
+		Node tempNode = head;
+		head = new Node(data);
+		head.next_node = tempNode;
+		return head.data;
+	}
 }
