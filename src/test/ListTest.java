@@ -78,8 +78,9 @@ class ListTest {
 		list.append("deep");
 		
 		Assert.assertEquals(2, list.count);
+
 	}
-	/*
+	
 	@Test
 	void testForToStringWithTwoNodes() {
 		LinkedList list = new LinkedList();
@@ -88,5 +89,27 @@ class ListTest {
 		
 		Assert.assertEquals("doop deep", list.to_string());
 	}
-	*/
+	
+	@Test
+	void testForAddingFiveNodes() {
+		LinkedList list = new LinkedList();
+		list.append("doop");
+		list.append("deep");
+		list.append("ding");
+		list.append("dah");
+		list.append("oom");
+		
+		Assert.assertEquals(5, list.count);
+	}
+	
+	  @Test void testForToStringWithFiveNodes() { 
+		  LinkedList list = new LinkedList(); 
+		  list.append("doop"); 
+		  list.append("deep"); 
+		  list.append("ding");
+		  list.append("dah"); 
+		  list.append("oom");
+	  
+		  Assert.assertEquals("doop deep ding dah oom", list.to_string()); }
+	 
 }
