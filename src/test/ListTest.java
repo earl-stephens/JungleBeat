@@ -1,8 +1,6 @@
 package test;
 import main.*;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
@@ -43,7 +41,7 @@ class ListTest {
 		LinkedList list = new LinkedList();
 		list.append("doop");
 		
-		Assert.assertEquals(1, list.count);
+		Assert.assertEquals(1, list.count());
 	}
 	
 	@Test
@@ -77,7 +75,7 @@ class ListTest {
 		list.append("doop");
 		list.append("deep");
 		
-		Assert.assertEquals(2, list.count);
+		Assert.assertEquals(2, list.count());
 
 	}
 	
@@ -99,7 +97,7 @@ class ListTest {
 		list.append("dah");
 		list.append("oom");
 		
-		Assert.assertEquals(5, list.count);
+		Assert.assertEquals(5, list.count());
 	}
 	
 	  @Test void testForToStringWithFiveNodes() { 
