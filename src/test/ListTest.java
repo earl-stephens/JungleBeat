@@ -61,16 +61,25 @@ class ListTest {
 		
 		Assert.assertEquals(list.head.getClass(), Node.class);
 	}
-	/*
+	
 	@Test
 	void testForAddingASecondNode() {
 		LinkedList list = new LinkedList();
 		list.append("doop");
 		list.append("deep");
 		
-		Assert.assertEquals(2, list.count);
+		Assert.assertEquals("deep", list.head.next_node.data);
 	}
 	
+	@Test
+	void testThatThereAreTwoNodes() {
+		LinkedList list = new LinkedList();
+		list.append("doop");
+		list.append("deep");
+		
+		Assert.assertEquals(2, list.count);
+	}
+	/*
 	@Test
 	void testForToStringWithTwoNodes() {
 		LinkedList list = new LinkedList();
