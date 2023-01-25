@@ -97,8 +97,6 @@ public class LinkedList {
 				//Need position -1 because want the node before the position
 				last = last.next_node;
 				counter++;
-				System.out.println("line 101 " + last.data);
-				System.out.println(counter);
 			}
 			
 			Node tempNode = last.next_node;
@@ -106,5 +104,52 @@ public class LinkedList {
 			last.next_node.next_node = tempNode;
 			return last.next_node.data;
 		}
+	}
+	
+	public String find(int position, int elements) {
+		Node last = head;
+		int counter = 0;
+		
+		while(counter < (position)) {
+			last = last.next_node;
+			counter++;
+		}
+		
+		ArrayList<String> tempList = new ArrayList<>();
+		tempList.add(last.data);
+		
+		for(int i = counter; i < elements; i++) {
+			last = last.next_node;
+			tempList.add(last.data);
+			counter++;
+		}
+		
+		String listString = String.join(" ", tempList);
+		return listString;
+	}
+	
+	public boolean includes(String dataToFind) {
+		boolean result = false;
+		Node last = head;
+		
+		while(last.next_node != null) {
+			if(last.data.equals(dataToFind)) {
+				result = true;
+			}
+			last = last.next_node;
+		}
+		return result;
+	}
+	
+	public String pop() {
+		Node last = head;
+		
+		while(last.next_node.next_node != null) {
+			last = last.next_node;
+			}
+		
+		String lastData = last.next_node.data;
+		last.next_node = null;
+		return lastData;
 	}
 }

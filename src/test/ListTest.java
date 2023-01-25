@@ -152,4 +152,91 @@ class ListTest {
 		  
 		  Assert.assertEquals("dop woo plop oom suu", list.to_string());
 	  }
+	  
+	  @Test
+	  void testTheFindMethod() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  Assert.assertEquals("shi", list.find(2, 1));
+	  }
+	  
+	  @Test
+	  void testTheFindMethodWithMultipleElements() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  Assert.assertEquals("woo shi shu", list.find(1, 3));
+	  }
+	  
+	  @Test
+	  void testForIncludesMethod() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  Assert.assertTrue(list.includes("deep"));
+	  }
+	  
+	  @Test
+	  void testForIncludesNotMatching() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  Assert.assertFalse(list.includes("dep"));
+	  }
+	  
+	  @Test
+	  void testForPopMethod() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  Assert.assertEquals("blop", list.pop());
+	  }
+	  
+	  @Test
+	  void testForPopMethodTwice() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  list.pop();
+		  
+		  Assert.assertEquals("shu", list.pop());
+	  }
+	  
+	  @Test
+	  void secondTestForPopMethodTwice() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  list.pop();
+		  list.pop();
+		  
+		  Assert.assertEquals("deep woo shi", list.to_string());
+	  }
 }
