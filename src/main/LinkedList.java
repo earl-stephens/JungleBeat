@@ -97,8 +97,6 @@ public class LinkedList {
 				//Need position -1 because want the node before the position
 				last = last.next_node;
 				counter++;
-				System.out.println("line 101 " + last.data);
-				System.out.println(counter);
 			}
 			
 			Node tempNode = last.next_node;
@@ -106,5 +104,18 @@ public class LinkedList {
 			last.next_node.next_node = tempNode;
 			return last.next_node.data;
 		}
+	}
+	
+	public String find(int position, int elements) {
+		Node last = head;
+		int counter = 0;
+		
+		while(counter < (position)) {
+			last = last.next_node;
+			counter++;
+		}
+		
+		
+		return last.data;
 	}
 }

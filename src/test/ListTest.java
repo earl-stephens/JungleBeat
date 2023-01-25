@@ -152,4 +152,16 @@ class ListTest {
 		  
 		  Assert.assertEquals("dop woo plop oom suu", list.to_string());
 	  }
+	  
+	  @Test
+	  void testTheFindMethod() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  Assert.assertEquals("shi", list.find(2, 1));
+	  }
 }
