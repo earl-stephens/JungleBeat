@@ -1,11 +1,17 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class LinkedList {
 	public Node head = null;
+	private String[] allowedWords = {"tee", "dee", "deep", "bop", "boop", "la", "na", "doop", "ding", "dah", "oom", "plop", "suu", "woo", "shi", "shu", "blop", "dop", "doo", "ditt", "hoo"};
 	
 	public String append(String data) {
+		if(onApprovedList(data) == false) {
+			return "";
+		}
+		
 		if(head == null) {
 			//Create head/first node
 			head = new Node(data);
@@ -72,6 +78,10 @@ public class LinkedList {
 	}
 	
 	public String prepend(String data) {
+		if(onApprovedList(data) == false) {
+			return "";
+		}
+		
 		Node tempNode = head;
 		head = new Node(data);
 		head.next_node = tempNode;
@@ -79,6 +89,10 @@ public class LinkedList {
 	}
 	
 	public String insert(int position, String data) {
+		if(onApprovedList(data) == false) {
+			return "";
+		}
+		
 		if(position == 0) {
 			prepend(data);
 			return head.data;
@@ -151,5 +165,9 @@ public class LinkedList {
 		String lastData = last.next_node.data;
 		last.next_node = null;
 		return lastData;
+	}
+	
+	private boolean onApprovedList(String word) {
+			return (Arrays.asList(allowedWords).contains(word));
 	}
 }
