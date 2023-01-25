@@ -38,9 +38,13 @@ public class JungleBeat {
 		scanner.close();
 		
 		if(rate.equals("rate")) {
-			rate = "500";
+			return resetRate();
 		} 
 		
 		return rate;
+	}
+	
+	private String resetRate() {
+		return "500";
 	}
 }
