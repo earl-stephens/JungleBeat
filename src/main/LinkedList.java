@@ -8,7 +8,7 @@ public class LinkedList {
 	private String[] allowedWords = {"tee", "dee", "deep", "bop", "boop", "la", "na", "doop", "ding", "dah", "oom", "plop", "suu", "woo", "shi", "shu", "blop", "dop", "doo", "ditt", "hoo"};
 	
 	public String append(String data) {
-		if(!Arrays.asList(allowedWords).contains(data)) {
+		if(onApprovedList(data) == false) {
 			return "";
 		}
 		
@@ -157,5 +157,9 @@ public class LinkedList {
 		String lastData = last.next_node.data;
 		last.next_node = null;
 		return lastData;
+	}
+	
+	private boolean onApprovedList(String word) {
+			return (Arrays.asList(allowedWords).contains(word));
 	}
 }
