@@ -14,5 +14,10 @@ class JungleBeatTest {
 		
 		Assert.assertNotNull(jb);
 	}
-
+	@Test
+	void testForListAttribute() {
+		JungleBeat jb = new JungleBeat();
+		
+		Assert.assertEquals(LinkedList.class, jb.list.getClass());
+	}
 }
