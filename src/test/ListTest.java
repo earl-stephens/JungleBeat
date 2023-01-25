@@ -125,4 +125,31 @@ class ListTest {
 		  Assert.assertEquals("dop plop suu", list.to_string());
 		  Assert.assertEquals(3, list.count());
 	  }
+	  
+	  @Test
+	  void testForInsertMethod() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("dop"); 
+		  list.append("plop"); 
+		  list.append("suu");
+		  
+		  Assert.assertEquals("woo", list.insert(1, "woo"));
+		  Assert.assertEquals("deep", list.insert(0, "deep"));
+		  Assert.assertEquals("oom", list.insert(3, "oom"));
+	  }
+	  
+	  @Test
+	  void testToStringAfterInsertMethod() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("dop"); 
+		  list.append("plop"); 
+		  list.append("suu");
+		  list.insert(1, "woo");
+		  
+		  Assert.assertEquals("dop woo plop suu", list.to_string());
+		  
+		  list.insert(3, "oom");
+		  
+		  Assert.assertEquals("dop woo plop oom suu", list.to_string());
+	  }
 }

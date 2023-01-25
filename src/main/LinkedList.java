@@ -77,4 +77,34 @@ public class LinkedList {
 		head.next_node = tempNode;
 		return head.data;
 	}
+	
+	public String insert(int position, String data) {
+		if(position == 0) {
+			prepend(data);
+			return head.data;
+		} else {
+			int counter = 1;
+			
+			if(position == 1) {
+				Node tempNode = head.next_node;
+				head.next_node = new Node(data);
+				head.next_node.next_node = tempNode;
+				return head.next_node.data;
+			}
+			
+			Node last = head.next_node;
+			while(counter < (position - 1)) {
+				//Need position -1 because want the node before the position
+				last = last.next_node;
+				counter++;
+				System.out.println("line 101 " + last.data);
+				System.out.println(counter);
+			}
+			
+			Node tempNode = last.next_node;
+			last.next_node = new Node(data);
+			last.next_node.next_node = tempNode;
+			return last.next_node.data;
+		}
+	}
 }
