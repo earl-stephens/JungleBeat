@@ -115,7 +115,16 @@ public class LinkedList {
 			counter++;
 		}
 		
+		ArrayList<String> tempList = new ArrayList<>();
+		tempList.add(last.data);
 		
-		return last.data;
+		for(int i = counter; i < elements; i++) {
+			last = last.next_node;
+			tempList.add(last.data);
+			counter++;
+		}
+		
+		String listString = String.join(" ", tempList);
+		return listString;
 	}
 }

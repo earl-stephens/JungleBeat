@@ -164,4 +164,18 @@ class ListTest {
 		  
 		  Assert.assertEquals("shi", list.find(2, 1));
 	  }
+	  
+	  @Test
+	  void testTheFindMethodWithMultipleElements() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  Assert.assertEquals("woo shi shu", list.find(1, 3));
+	  }
+	  
+	  
 }
