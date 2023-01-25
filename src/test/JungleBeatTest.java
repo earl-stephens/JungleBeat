@@ -35,4 +35,17 @@ class JungleBeatTest {
 		
 		Assert.assertEquals("deep doo ditt", jb.append("deep doo ditt"));
 	}
+	
+	@Test
+	void testThatAppendFormatsTheData() {
+		JungleBeat jb = new JungleBeat();
+		jb.append("deep doo ditt");
+		
+		Assert.assertEquals("deep", jb.list.head.data);
+		Assert.assertEquals("doo", jb.list.head.next_node.data);
+		
+		jb.append("woo hoo shu");
+		
+		Assert.assertEquals(6, jb.list.count());
+	}
 }
