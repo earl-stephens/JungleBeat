@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 class ListTest {
-/*
+
 	@Test
 	void testThatThereIsAList() {
 		LinkedList list = new LinkedList();
@@ -200,7 +200,7 @@ class ListTest {
 		  
 		  Assert.assertFalse(list.includes("dep"));
 	  }
-	  */
+	  
 	  @Test
 	  void testForPopMethod() {
 		  LinkedList list = new LinkedList(); 
