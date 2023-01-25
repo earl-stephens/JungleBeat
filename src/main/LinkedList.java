@@ -127,4 +127,17 @@ public class LinkedList {
 		String listString = String.join(" ", tempList);
 		return listString;
 	}
+	
+	public boolean includes(String dataToFind) {
+		boolean result = false;
+		Node last = head;
+		
+		while(last.next_node != null) {
+			if(last.data.equals(dataToFind)) {
+				result = true;
+			}
+			last = last.next_node;
+		}
+		return result;
+	}
 }

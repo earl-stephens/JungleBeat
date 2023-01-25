@@ -177,5 +177,15 @@ class ListTest {
 		  Assert.assertEquals("woo shi shu", list.find(1, 3));
 	  }
 	  
-	  
+	  @Test
+	  void testForIncludesMethod() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  Assert.assertTrue(list.includes("deep"));
+	  }
 }
