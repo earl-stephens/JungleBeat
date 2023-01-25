@@ -249,4 +249,30 @@ class ListTest {
 		  
 		  Assert.assertEquals("deep", list.to_string());
 	  }
+	  
+	  @Test
+	  void testForValidationOfWordsInPrepend() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  list.prepend("Mississippi");
+		  
+		  Assert.assertEquals("deep woo shi shu blop", list.to_string());
+	  }
+	  
+	  @Test
+	  void testForInsertMethodWithWordValidation() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("dop"); 
+		  list.append("plop"); 
+		  list.append("suu");
+		  
+		  list.insert(1, "Mississippi");
+		  
+		  Assert.assertEquals("dop plop suu", list.to_string());
+	  }
 }

@@ -78,6 +78,10 @@ public class LinkedList {
 	}
 	
 	public String prepend(String data) {
+		if(onApprovedList(data) == false) {
+			return "";
+		}
+		
 		Node tempNode = head;
 		head = new Node(data);
 		head.next_node = tempNode;
@@ -85,6 +89,10 @@ public class LinkedList {
 	}
 	
 	public String insert(int position, String data) {
+		if(onApprovedList(data) == false) {
+			return "";
+		}
+		
 		if(position == 0) {
 			prepend(data);
 			return head.data;
