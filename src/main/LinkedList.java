@@ -140,4 +140,16 @@ public class LinkedList {
 		}
 		return result;
 	}
+	
+	public String pop() {
+		Node last = head;
+		
+		while(last.next_node.next_node != null) {
+			last = last.next_node;
+			}
+		
+		String lastData = last.next_node.data;
+		last.next_node = null;
+		return lastData;
+	}
 }

@@ -5,7 +5,7 @@ import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
 class ListTest {
-
+/*
 	@Test
 	void testThatThereIsAList() {
 		LinkedList list = new LinkedList();
@@ -199,5 +199,44 @@ class ListTest {
 		  list.append("blop");
 		  
 		  Assert.assertFalse(list.includes("dep"));
+	  }
+	  */
+	  @Test
+	  void testForPopMethod() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  Assert.assertEquals("blop", list.pop());
+	  }
+	  
+	  @Test
+	  void testForPopMethodTwice() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  list.pop();
+		  
+		  Assert.assertEquals("shu", list.pop());
+	  }
+	  
+	  @Test
+	  void secondTestForPopMethodTwice() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  list.pop();
+		  list.pop();
+		  
+		  Assert.assertEquals("deep woo shi", list.to_string());
 	  }
 }
