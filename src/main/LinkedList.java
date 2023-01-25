@@ -1,11 +1,17 @@
 package main;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class LinkedList {
 	public Node head = null;
+	private String[] allowedWords = {"tee", "dee", "deep", "bop", "boop", "la", "na", "doop", "ding", "dah", "oom", "plop", "suu", "woo", "shi", "shu", "blop", "dop", "doo", "ditt", "hoo"};
 	
 	public String append(String data) {
+		if(!Arrays.asList(allowedWords).contains(data)) {
+			return "";
+		}
+		
 		if(head == null) {
 			//Create head/first node
 			head = new Node(data);

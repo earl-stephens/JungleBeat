@@ -48,4 +48,14 @@ class JungleBeatTest {
 		
 		Assert.assertEquals(6, jb.list.count());
 	}
+	
+	@Test
+	void testValidationOnAppend() {
+		JungleBeat jb = new JungleBeat();
+		jb.append("deep");
+		
+		jb.append("Mississippi");
+		
+		Assert.assertEquals("deep", jb.list.to_string());
+	}
 }

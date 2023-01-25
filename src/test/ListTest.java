@@ -239,4 +239,14 @@ class ListTest {
 		  
 		  Assert.assertEquals("deep woo shi", list.to_string());
 	  }
+	  
+	  @Test
+	  void testForValidationOfWordsInAppend() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  
+		  list.append("Mississippi");
+		  
+		  Assert.assertEquals("deep", list.to_string());
+	  }
 }
