@@ -1,6 +1,6 @@
 package main;
 
-import java.util.ArrayList;
+import java.io.IOException;
 
 public class JungleBeat {
 	public LinkedList list;
@@ -16,5 +16,14 @@ public class JungleBeat {
 			list.append(soloData);
 		}
 		return data;
+	}
+	
+	public void play() {
+		String command = "say " + list.to_string();
+		try {
+		Process process = Runtime.getRuntime().exec(command);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }
