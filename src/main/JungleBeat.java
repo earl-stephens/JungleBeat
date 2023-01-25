@@ -6,4 +6,8 @@ public class JungleBeat {
 	public JungleBeat() {
 		list = new LinkedList();
 	}
+	
+	public String append(String data) {
+		return data;
+	}
 }

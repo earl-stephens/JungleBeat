@@ -28,4 +28,11 @@ class JungleBeatTest {
 		
 		Assert.assertNull(jb.list.head);
 	}
+	
+	@Test
+	void testThatDataIsFormattedBeforeGoingToLinkedListClass() {
+		JungleBeat jb = new JungleBeat();
+		
+		Assert.assertEquals("deep doo ditt", jb.append("deep doo ditt"));
+	}
 }
