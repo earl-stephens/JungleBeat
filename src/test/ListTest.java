@@ -188,4 +188,16 @@ class ListTest {
 		  
 		  Assert.assertTrue(list.includes("deep"));
 	  }
+	  
+	  @Test
+	  void testForIncludesNotMatching() {
+		  LinkedList list = new LinkedList(); 
+		  list.append("deep"); 
+		  list.append("woo"); 
+		  list.append("shi");
+		  list.append("shu");
+		  list.append("blop");
+		  
+		  Assert.assertFalse(list.includes("dep"));
+	  }
 }
